@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let detailVC = DetailController(resource:Article.all)
+        detailVC.view.frame = CGRect(x: 0, y: 0, width: 250, height: 300)
+        window?.rootViewController = detailVC
+        window?.makeKeyAndVisible()
         return true
     }
 
